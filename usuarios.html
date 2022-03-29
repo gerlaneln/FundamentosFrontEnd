@@ -10,6 +10,7 @@
     <body>
         <header>
             <div id="logo">
+                <img src="imagens/logo.png" alt="Logo SGCM"/>
                 <span>SGCM</span>
             </div>
             <div id="usuarioInfo">
@@ -32,11 +33,13 @@
         </nav>
         <main>
 
-            <div>
+            <div class="alerta erro">
+                <span>&times;</span>
                 ERRO!
             </div>
 
-            <div>
+            <div class="alerta sucesso">
+                <span>&times;</span>
                 SUCESSO!
             </div>
 
@@ -67,8 +70,10 @@
 
             <div id="comandos">
                 <button type="button">Adicionar</button>
-                <label for="busca">Busca</label>
-                <input type="text" name="busca" id="busca" placeholder="Digite para pesquisar">
+                <div>
+                    <label for="busca">Busca</label>
+                    <input type="text" name="busca" id="busca" placeholder="Digite para pesquisar">
+                </div>
             </div>
 
             <table>
