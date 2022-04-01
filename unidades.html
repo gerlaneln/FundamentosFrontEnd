@@ -44,6 +44,7 @@
                 </li>
             </ul>
         </nav>
+
         <main>
             <div class="alerta erro">
                 <span>&times;</span>
@@ -53,30 +54,29 @@
                 <span>&times;</span>
                 SUCESSO!
             </div>
-            <form action="#" method="get">
+            <form class="formulario" action="#" method="get">
                 <div class="grid">
                     <input type="hidden" name="id">
-                    <label for="nomeCompleto">Nome</label>
-                    <input type="text" name="nomeCompleto" id="nomeCompleto">
-                    <label for="nomeUsuario">Usuario</label>
-                    <input type="text" name="nomeUsuario" id="nomeUsuario" required>
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha">
-                    <label for="ativo">Ativo</label>
-                    <input type="checkbox" name="ativo" id="ativo">
-                    <label for="papel">Papel</label>
-                    <select name="papel" id="papel" required>
-                        <option value=""></option>
-                        <option value="USUARIO">USUARIO</option>
-                        <option value="ADMIN">ADMIN</option>
+                    <label for="unidade">Nome</label>
+                    <input type="text" name="unidade" id="unidade" required>
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" required>
+                    <label for="contato">Contatos</label>
+                    <input type="tel" name="contato" id="contato" required>
+                    <label for="horarioFuncionamento">Horários</label>
+                    <input type="datetime" name="horarioFuncionamento" id="horarioFuncionamento">
+                    
+                    <label for="unidadeAtivo">Unidade ativa</label>
+                    <input type="checkbox" name="unidadeAtivo" id="unidadeAtivo" required>
                     </select>
                 </div>
-                <input type="button" value="Cancelar">
-                <input type="submit" value="Enviar" disabled>
+                <input class="cancelar" type="button" value="Cancelar">
+                <input type="submit" value="Enviar">
             </form>
-            <button type="button" id="load">Carregar dados</button>
             <div id="comandos">
-                <button type="button">Adicionar</button>
+                <button class="adcionar" type="button">Adicionar</button>
                 <div>
                     <label for="busca">Busca</label>
                     <input type="text" name="busca" id="busca" placeholder="Digite para pesquisar">
@@ -87,54 +87,67 @@
                     <tr>
                         <th>ID</th>
                         <th>Nome</th>
-                        <th>Usuário</th>
+                        <th>Estado</th>
+                        <th>Endereço</th>
+                        <th>Contatos</th>
+                        <th>Horários</th>
                         <th>Ativo</th>
-                        <th>Papel</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="fit">1</td>
-                        <td>Administrador</td>
-                        <td>admin</td>
+                        <td>Unidade Belo Horizonte</td>
+                        <td>Minas Gerais</td>
+                        <td>Rua Sebastião Fabiano Dias, 210 – Loja 37 – Belvedere, Belo Horizonte – MG | CEP: 30320-690</td>
+                        <td>(31) 2533-8700</td>
+                        <td>24 horas</td>
                         <td>Sim</td>
-                        <td>ADMIN</td>
                         <td>
                             <button type="button">Editar</button>
-                            <button type="button" class="excluir" disabled>Excluir</button>
+                            <button type="button" class="excluir">Excluir</button>
+                            <button type="button" class="relatorio">Relatorio</button>
                         </td>
                     </tr>
                     <tr>
                         <td class="fit">2</td>
-                        <td>Daniel</td>
-                        <td>daniel</td>
+                        <td>Unidade São Paulo</td>
+                        <td>São Paulo</td>
+                        <td>Rua Gomes de Carvalho, 621, conjunto 1204, Vila Olímpia - São Paulo – SP | CEP: 04547-002</td>
+                        <td>(11) 3090-7972</td>
+                        <td>8:00 ás 13:00</td>
                         <td>Sim</td>
-                        <td>USUARIO</td>
                         <td>
                             <button type="button">Editar</button>
                             <button type="button" class="excluir">Excluir</button>
+                            <button type="button" class="relatorio">Relatorio</button>
                         </td>
                     </tr>
                     <tr>
                         <td class="fit">3</td>
-                        <td>Paulo</td>
-                        <td>paulo</td>
+                        <td>Unidade Curitiba</td>
+                        <td>Paraná</td>
+                        <td>Av. Sete de Setembro, 4923 – 17º andar, Sala 1702 - Batel, Curitiba – PR | CEP: 80240-000</td>
+                        <td>(41) 4040-4168</td>
+                        <td>24 horas</td>
                         <td>Não</td>
-                        <td>USUARIO</td>
-                        <td>                            
+                        <td>
                             <button type="button">Editar</button>
                             <button type="button" class="excluir">Excluir</button>
+                            <button type="button" class="relatorio">Relatorio</button>
                         </td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="6">Total de registros: 3</td>
+                        <td colspan="8">Total de registros: 3</td>
                     </tr>
                 </tfoot>
             </table>
         </main>
+
+
         <footer>
             <span>
                 SGCM - Sistema de Gerenciamento de Clínica Médica
@@ -147,5 +160,4 @@
                 </a>
             </span>
         </footer>
-    </body>
-</html>
+<html>

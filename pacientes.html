@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html data-theme="azul">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="script.js"></script>
+    <title>Clínica Médica</title>
+</head>
+<body>
+
+    <header>
+            <div id="logo">
+                <img src="imagens/logo.png" alt="Logo SGCM">
+                <span>SGCM</span>
+            </div>
+
+            <div id="usuarioInfo">
+                <span>Usuário: Administrador (admin)</span>
+                <span>Papel: ADMIN</span>
+                <button type="button">Logout</button>
+                <div class="changeTheme">
+                    <button type="button" id="azul"></button>
+                    <button type="button" id="verde"></button>
+                    <button type="button" id="light"></button>
+                </div>
+            </div>
+            
+            
+        </header>
+        <nav>
+           <ul>
+               <li><a href="agenda.html">Agenda</a></li>
+               <li><a href="atendimento.html">Atendimento</a></li>
+               <li><a href="pacientes.html">Pacientes</a></li>
+               <li><a href="profissionais.html">Profissionais</a></li>
+               <li><a href="convenios.html">Convênios</a></li>
+               <li id="dropdown">
+                   <a href="javascript-void(0)">
+                       Configurações<i></i>&#9660;</i> </a>
+                   <div id="dropdown_conteudo">
+                       <a href="unidades.html">Unidades</a>
+                       <a href="especialidades.html">Especialidades</a>
+                       <a href="usuarios.html">Usuários</a>
+
+                   </div>
+               </li>
+           </ul>
+        </nav>
+
+        <main>
+              <div class="alerta erro">
+                  <span style="float: right;">&times;</span>
+                  Erro!
+              </div>
+              <div class="alerta sucesso">
+                  <span style="float: right;">&times;</span>
+                  Sucesso!
+              </div>
+
+                
+
+                
+
+                
+
+               
+          
+            <form method="get" action="#">
+              <div class="grid">
+                <input type="hidden" name="id">
+                <label for="nomeCompleto" >Nome:</label>
+                <input type="text" name="nomeCompleto" required id="nameCompleto">
+
+                <label for="sexo" >Sexo:</label>
+                <select name="sexo"    required id="sexo">
+                   <option value=""> </option>
+                   <option value="Masculino">Masculino</option>
+                   <option value="Feminino">Feminino</option>
+                </select>
+
+                
+
+                <label for="dataNascimento" >Data de nascimento:</label>
+                <input type="text" name="dataNascimento" required id="dataNascimento">
+
+
+                <label for="rg" >RG:</label>
+                <input type="text" name="rg" id="rg" required>
+
+                <label for="orgaoEmissor" >Órgão Emissor:</label>
+                <input type="text" name="orgaoEmissor" id="orgaoEmissor" required>
+
+
+                <label for="estadoOrgaoEmissor">Estado do órgão emissor do RG:</label>
+                <select name="estadoOrgaoEmissor" required>
+                <option value="">Selecionar: </option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+           </select>
+
+                <label for="cpf" >CPF:</label>
+                <input type="text" name="cpf" required id="cpf">
+
+
+                <label for="ocupacao" >Ocupação:</label>
+                <select name="ocupacao"    required id="ocupacao">
+                   <option value=""> </option>
+                   <option value="Autônomo(a)">Autônomo(a)</option>
+                   <option value="Do Lar">Do Lar</option>
+                   <option value="Estudante">Estudante</option>
+                   <option value="Empregado(a) empresa privada">Empregado(a) empresa privada</option>
+                   <option value="Servidor(a) Público(a)">Servidor(a) Público(a)</option>
+
+                </select>
+
+
+                <input type="hidden" name="endereco">
+                <label for="endereco" >Endereço:</label>
+                <input type="text" name="endereco"  placeholder="Rua, Avenida, Travessa..."  required id="endereco">
+
+                <input type="hidden" name="numero">
+                <label for="numero" >Número:</label>
+                <input type="text" name="numero" required id="numero">
+
+                <input type="hidden" name="bairro">
+                <label for="bairro" >Bairro:</label>
+                <input type="text" name="bairro" required id="bairro">
+
+
+               <label for="municipio">Município:</label>
+               <select name="municipio"   id="municipio" required>
+               <option value="">Selecione o município:</option>
+               <option value="Acrelândia">Acrelândia</option>
+               <option value="Assis Brasil">Assis Brasil</option>
+               <option value="Brasileia">Brasileia</option>
+               <option value="Bujari">Bujari</option>
+               <option value="Capixaba">Capixaba</option>
+               <option value="Cruzeiro do Sul">Cruzeiro do Sul</option>
+               <option value="Epitaciolândia">Epitaciolândia</option>
+               <option value="Feijó">Feijó</option>
+               <option value="Jordão">Jordão</option>
+               <option value="Manoel Urbano">Manoel Urbano</option>
+               <option value="Marechal Thaumaturgo">Marechal Thaumaturgo</option>
+               <option value="Mâncio Lima">Mâncio Lima</option>
+               <option value="Plácido de Castro">Plácido de Castro</option>
+               <option value="Porto Acre">Porto Acre</option>
+               <option value="Porto Walter">Porto Walter</option>
+               <option value="Rio Branco">Rio Branco</option>
+               <option value="Rodrigues Alves">Rodrigues Alves</option>
+               <option value="Santa Rosa do Purus">Santa Rosa do Purus</option>
+               <option value="Sena Madureira">Sena Madureira</option>
+               <option value="Senador Guiomard">Senador Guiomard</option>
+               <option value="Tarauacá">Tarauacá</option>
+               <option value="Xapuri">Xapuri</option>
+             </select>
+
+
+
+                <label for="ativo" >Ativo:</label>
+                <input type="checkbox" name="ativo" id="ativo" required>
+
+                <label for="papel" >Papel:</label>
+                <select name="papel"    required id="papel">
+                   <option value=""> </option>
+                   <option value="Usuário">Usuário</option>
+                   <option value="Admin">Admin</option>
+                </select>
+             </div>
+                
+                <input type="button" value="Cancelar">
+                <input type="submit" disabled value="Enviar"></button>
+
+            </form>
+        
+
+            <button type="button" id="load">Carregar dados</button>
+    
+
+            <div id="comando">
+               <button type="button">Adicionar</button>
+
+            
+               <div>
+                 <label for="busca">Busca</label>
+                 <input type="text" name="busca" id="busca" placeholder="Buscar por...">
+                </div>
+            </div>
+            <table>
+                <thead>
+                   <tr><th colspan="9">Pacientes</th></tr>
+                   <tr>
+                       <th>ID</th>
+                       <th>Nome</th>
+                       <th>Sexo</th>
+                       <th>Data de nascimento</th>
+                       <th>Documentos</th>
+                       <th>Ocupação</th>
+                       <th>Endereço</th>
+                       <th>Ativo</th>
+                       <th>Ações</th>
+                   </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fit">1</td>
+                        <td>José da Silva</td>
+                        <td>Masculino</td>
+                        <td>10/02/1980</td>
+                        <td>
+                            RG 12456/SSP/AC
+                            <br/>
+                            CPF: 000.000.000-00
+                        </td>
+                        <td>Autônomo(a)</td>
+                        <td>
+                            Rua Garibaldi nº 3
+                            <br/>
+                            Bairro: Centro
+                            <br/>
+                            Município: Rio Branco
+                        </td>
+                        <td>Sim</td>
+                        <td>
+                            <button type="button">Editar</button>
+                            <button type="button" class="excluir">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="fit">1</td>
+                        <td>Maria de Souza</td>
+                        <td>Feminino</td>
+                        <td>12/04/1990</td>
+                        <td>
+                            RG 10251/SSP/MT
+                            <br/>
+                            CPF: 000.000.000-00
+                        </td>
+                        <td>Do Lar</td>
+                        <td>
+                            Rua Tucumã nº 23
+                            <br/>
+                            Bairro: Tucumã
+                            <br/>
+                            Município: Rio Branco
+                        </td>
+                        <td>Sim</td>
+                        <td>
+                            <button type="button">Editar</button>
+                            <button type="button" class="excluir">Excluir</button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="fit">1</td>
+                        <td>Camila Costa</td>
+                        <td>Feminino</td>
+                        <td>21/08/1995</td>
+                        <td>
+                            RG 24056/SSP/AC
+                            <br/>
+                            CPF: 000.000.000-00
+                        </td>
+                        <td>Estudante</td>
+                        <td>
+                            Rua Garibaldi nº 3
+                            <br/>
+                            Bairro: Centro
+                            <br/>
+                            Município: Rio Branco
+                        </td>
+                        <td>Sim</td>
+                        <td>
+                            <button type="button">Editar</button>
+                            <button type="button" class="excluir">Excluir</button>
+                        </td>
+                    </tr>
+                
+                </tbody>
+                <tfoot>
+                   <td colspan="9">Total de registros: 3</td>
+                </tfoot>
+            </table>
+        </main>
+
+        <footer>
+            <span>Sistema de Gerenciamento de Clínica Médica</span>
+            <span>Suporte Técnico: (68) 5555-5555 E-mail: <a href="mailto:suporte.sgcm@ufac.br">suporte.sgcm@ufac.br</a></span>
+        </footer>
+
+</body>
+</html>
+
