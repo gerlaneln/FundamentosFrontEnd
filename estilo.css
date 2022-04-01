@@ -1,3 +1,130 @@
+html[data-theme="azul"]{
+    --header-background-image: linear-gradient(#003366, #006699);
+    --footer-background-color: #003366;
+    --main-background-color: linear-gradient(#cccccc, white);
+    --nav-background-color: #383838;
+
+    --nav-border-color: white;
+    --nav-ul-li-a-color: white;
+    --nav-ul-li-a-hover-color: #cccccc;
+    --nav-ul-li-a-hover-bg-color: #383838;
+
+    --dropdown-bg-color: #383838;
+    --dropdown-border-color: white;
+    --dropdown-shadow-color: black;
+
+    --input-border-color: #757575;
+
+    --button-font-color: white;
+    --button-editar-color: #2c832d;
+    --button-excluir-color: #c42626;
+    --button-editar-hover-color: #1e5e20;
+    --button-excluir-hover-color: #811b1b;
+    --button-disabled-color: #757575;
+    --button-disabled-color-txt: #cccccc;
+
+    --button-confirmacao-bg: #7c7401;
+    --button-confirmacao-bg-hover: #554f02;
+    --button-chegada-bg: #01378a;
+    --button-chegada-hover: #042b66;
+
+    --div-comandos-border-bottom-color: #003366;
+
+    --table-font-txt: white;
+    --table-th-color: #003366;
+    --table-odd-child-color: #c6d4e2;
+    --table-even-child-color: #e7ecf1;
+    --table-tbody-hover: #cccccc;
+
+    --font-header-footer-color: white;
+    --footer-link-color: white;
+}
+
+html[data-theme="verde"]{
+    --header-background-image: linear-gradient(#146551, #589A8D);
+    --footer-background-color: #146551;
+    --main-background-color: linear-gradient(#8FC1B5, white);
+    --nav-background-color: #265C4B;
+
+    --nav-border-color: white;
+    --nav-ul-li-a-color: white;
+    --nav-ul-li-a-hover-color: #cccccc;
+    --nav-ul-li-a-hover-bg-color: #265C4B;
+
+    --dropdown-bg-color: #265C4B;
+    --dropdown-border-color: white;
+    --dropdown-shadow-color: black;
+
+    --input-border-color: #757575;
+
+    --button-font-color: white;
+    --button-editar-color: #2c832d;
+    --button-excluir-color: #c42626;
+    --button-editar-hover-color: #1e5e20;
+    --button-excluir-hover-color: #811b1b;
+    --button-disabled-color: #757575;
+    --button-disabled-color-txt: #cccccc;
+
+    --button-confirmacao-bg: #7c7401;
+    --button-confirmacao-bg-hover: #554f02;
+    --button-chegada-bg: #01378a;
+    --button-chegada-hover: #042b66;
+
+    --div-comandos-border-bottom-color: #146551;
+
+    --table-font-txt: white;
+    --table-th-color: #146551;
+    --table-odd-child-color: #b7c5c2;
+    --table-even-child-color: #e7ecf1;
+    --table-tbody-hover: #c1d3c1;
+
+    --font-header-footer-color: white;
+    --footer-link-color: white;
+}
+
+html[data-theme="light"]{
+    --header-background-image: linear-gradient(#CC9F9F, #FFF4E8);
+    --footer-background-color: #C7A18B;
+    --main-background-color: #E3D7CF;
+    --nav-background-color: #C7A18B;
+
+    --nav-border-color: white;
+    --nav-ul-li-a-color: rgb(52, 51, 51)
+    --nav-ul-li-a-hover-color: #FFF4E8;
+    --nav-ul-li-a-hover-bg-color: #FFF4E8;
+
+    --dropdown-bg-color: #C7A18B;
+    --dropdown-border-color: white;
+    --dropdown-shadow-color: #757575;
+
+    --input-border-color: #757575;
+
+    --button-font-color: white;
+    --button-editar-color: #2c832d;
+    --button-excluir-color: #c42626;
+    --button-editar-hover-color: #1e5e20;
+    --button-excluir-hover-color: #811b1b;
+    --button-disabled-color: #757575;
+    --button-disabled-color-txt: #cccccc;
+
+    --button-confirmacao-bg: #7c7401;
+    --button-confirmacao-bg-hover: #554f02;
+    --button-chegada-bg: #01378a;
+    --button-chegada-hover: #042b66;
+
+    --div-comandos-border-bottom-color: #146551;
+
+    --table-font-txt: rgb(45, 42, 42);
+    --table-th-color: #C7A18B;
+    --table-odd-child-color: #f3efec;
+    --table-even-child-color: white;
+    --table-tbody-hover: #e2d3c7;
+
+    --font-header-footer-color: rgb(57, 54, 54);
+    --footer-link-color: rgb(57, 54, 54);;
+}
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -6,28 +133,27 @@ body {
     height: 100vh;
 }
 
-
 /* Header e Footer */
 
 header, footer {
-    color: white;
+    color: var(--font-header-footer-color);
     padding: 0.5em;
 }
 
 header {
-    background-image: linear-gradient(#003366, #006699);
+    background-image: var(--header-background-image);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 footer {
-    background-color: #003366;
+    background-color: var(--footer-background-color);
     margin-top: auto;
 }
 
 footer a {
-    color: white;
+    color: var(--footer-link-color);
 }
 
 div#logo {
@@ -45,7 +171,7 @@ div#logo span {
     font-weight: bold;
 }
 
-div#usuarioInfo *, footer span {
+div#usuarioInfo span, footer span {
     display: block;
     margin-bottom: 0.5em;
 }
@@ -55,9 +181,11 @@ div#usuarioInfo span {
 }
 
 div#usuarioInfo button {
-    margin-left: auto;
+    margin-right: auto;
     border: 1px solid;
+    float: right;
 }
+
 
 @media screen and (max-width: 430px) {
 
@@ -75,11 +203,41 @@ div#usuarioInfo button {
 
 }
 
+/* Change Color */
+
+.changeTheme{
+    display: flex;
+    justify-content: space-between;
+}
+
+.changeTheme #azul #verde #light{
+    display: inline-block;
+}
+
+#azul{
+    background-color: #003366;
+}
+
+#verde{
+   background-color: #146551; 
+}
+
+#light{
+    background-color: #C7A18B;
+}
+
+#azul, #verde, #light{
+    margin-top: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
 
 /* Main */
 
 main {
-    background-image: linear-gradient(#cccccc, white);
+    background-image: var(--main-background-color);
     padding: 1em;
 }
 
@@ -87,9 +245,9 @@ main {
 /* NAV  */
 
 nav {
-    background-color: #383838;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    background-color: var(--nav-background-color);
+    border-top: 1px solid var(--nav-border-color);
+    border-bottom: 1px solid var(--nav-border-color);
 }
 
 nav ul {
@@ -104,13 +262,13 @@ nav ul li {
 nav ul li a {
     padding: 1em;
     display: inline-block;
-    color: white;
+    color: var(--nav-ul-li-a-color);
     text-decoration: none;
 }
 
 nav ul li a:hover {
-    background-color: #cccccc;
-    color: #383838;
+    background-color: var(--nav-ul-li-a-hover-color);
+    color: var(--nav-ul-li-a-hover-bg-color);
 }
 
 nav li#dropdown:hover div#dropdown_conteudo {
@@ -120,9 +278,9 @@ nav li#dropdown:hover div#dropdown_conteudo {
 nav div#dropdown_conteudo {
     display: none;
     position: absolute;
-    background-color: #383838;
-    border: 1px solid white;
-    box-shadow: 0px 2px 4px 0px black;
+    background-color: var(--dropdown-bg-color);
+    border: 1px solid var(--dropdown-border-color);
+    box-shadow: 0px 2px 4px 0px var(--dropdown-shadow-color);
 }
 
 nav div#dropdown_conteudo a {
@@ -213,7 +371,7 @@ select:required:invalid {
 input, select {
     height: 2em;
     box-sizing: border-box;
-    border: 1px solid #757575;
+    border: 1px solid var(--input-border-color);
 }
 
 input[type="checkbox"] {
@@ -242,8 +400,8 @@ input[type="date"] {
 /* Botões */
 
 button, input[type="button"], input[type="submit"] {
-    background-color: #2c832d;
-    color: white;
+    background-color: var(--button-editar-color);
+    color: var(--button-font-color);
     border: none;
     border-radius: 4px;
     height: 2em;
@@ -253,26 +411,26 @@ button, input[type="button"], input[type="submit"] {
 button.excluir,
 button.finalizar,
 button.cancelar {
-    background-color: #c42626;
+    background-color: var(--button-excluir-color);
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover  {
-    background-color: #1e5e20;
+    background-color: var(--button-editar-hover-color);
 }
 
 button.excluir:hover:not(:disabled),
 button.finalizar:hover:not(:disabled),
 button.cancelar:hover:not(:disabled) {
-    background-color: #811b1b;
+    background-color: var(--button-excluir-hover-color);
 }
 
 button:disabled,
 input[type="button"]:disabled,
 input[type="submit"]:disabled {
-    background-color: #757575;
-    color: #cccccc;
+    background-color: var(--button-disabled-color);
+    color: var(--button-disabled-color-txt);
     cursor: not-allowed;
 }
 
@@ -288,19 +446,19 @@ button.finalizar.oculto {
 }
 
 button.confirmacao {
-    background-color: #7c7401;
+    background-color: var(--button-confirmacao-bg);
 }
 
 button.confirmacao:hover {
-    background-color: #554f02;
+    background-color: var(--button-confirmacao-bg-hover);
 }
 
 button.chegada {
-    background-color: #01378a;
+    background-color: var(--button-chegada-bg);
 }
 
 button.chegada:hover {
-    background-color: #042b66;
+    background-color: var(--button-chegada-hover);
 }
 
 button.confirmacao,
@@ -321,7 +479,7 @@ div#comandos {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0.5em 0.1em;
-    border-bottom: 1px solid #003366;
+    border-bottom: 1px solid var(--div-comandos-border-bottom-color);
 }
 
 /* Tabela */
@@ -335,28 +493,28 @@ table {
 }
 
 table th {
-    background-color: #003366;
-    color: white;
+    background-color: var(--table-th-color);
+    color: var(--table-font-txt);
 }
  table th, table td {
      padding: 0.5em;
  }
 
  table tfoot td {
-     border-top: 1px solid #003366;
+     border-top: 1px solid var(--table-th-color);
      text-align: center;
  }
 
  table tbody tr:nth-child(odd){
-     background-color: #c6d4e2;
+     background-color: var(--table-odd-child-color);
  }
 
  table tbody tr:nth-child(even) {
-     background-color: #e7ecf1;
+     background-color: var(--table-even-child-color);
  }
 
  table tbody tr:hover {
-     background-color: #cccccc;
+     background-color: var(--table-tbody-hover);
  }
 
  table tbody td:last-child, table td.fit  {

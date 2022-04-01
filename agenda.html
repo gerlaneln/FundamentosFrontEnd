@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="azul">
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta charset="utf-8">
         <title>SGCM</title>
         <link rel="stylesheet" href="estilo.css">
+        <script src="script.js"></script>
     </head>
     <body>
         <header>
@@ -16,6 +17,11 @@
                 <span>Usuário: Administrador (admin)</span>
                 <span>Papel: ADMIN</span>
                 <button type="button">Logout</button>
+                <div class="changeTheme">
+                    <button type="button" id="azul"></button>
+                    <button type="button" id="verde"></button>
+                    <button type="button" id="light"></button>
+                </div>
             </div> 
         </header>
         <nav>
@@ -23,7 +29,7 @@
                 <li><a href="agenda.html">Agenda</a></li>
                 <li><a href="atendimento.html">Atendimento</a></li>
                 <li><a href="pacientes.html">Pacientes</a></li>
-                <li><a href="profissionais.hmlt">Profissionais</a></li>
+                <li><a href="profissionais.html">Profissionais</a></li>
                 <li><a href="convenios.html">Convênios</a></li>
                 <li id="dropdown">
                     <a href="javascript:void(0)">
